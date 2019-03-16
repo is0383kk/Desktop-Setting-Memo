@@ -1,7 +1,7 @@
 デスクトップ環境構築
 ====
 自分用のデスクトップのCUDAとcuDNNの環境構築
-#GPUの認識まで
+# GPUの認識まで
 ## 手順1
 1. インストール時  
 ubuntuインストール時に「Try Ubuntu without install」を選択する画面で**eを押し**grubを編集する．  
@@ -29,7 +29,7 @@ ubuntuインストール時に「Try Ubuntu without install」を選択する画
 と書き込み保存  
 `$ sudo update-initramfs -u`  
 で再読み込みし**再起動**
-##手順3:インストーラの実行
+## 手順4:インストーラの実行
 1. **Ctrl + Alt + F1 でcuiモードに入る**  
 `$ sudo service lightdm stop`  
 でGUIを停止  
@@ -40,15 +40,15 @@ ubuntuインストール時に「Try Ubuntu without install」を選択する画
 3. `$ sudo service lightdm restart`  
 でGUIモードに入り*再起動*  
 
-#CUDAおよびcuDNNの設定
-##手順1:CUDAのダウンロード
+# CUDAおよびcuDNNの設定
+## 手順1:CUDAのダウンロード
 [CUDA](https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal)  
 1. Linux  
 2. x86_64  
 3. Ubuntu  
 4. 16.04  
 5. deb(local)  
-##手順2:インストール
+## 手順2:インストール
 1. インストール  
 `$ sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb`  
 `$ sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub`  
