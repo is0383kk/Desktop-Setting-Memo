@@ -72,3 +72,20 @@ CPU:core i7-8700
 GPU:Geforce 1080 Ti 11GB  
 SSD:240GB  
 DDR4-2666 DIMM 16GB  
+
+# 追記(Ubuntu19.10インストール時)
+Ubuntu19.10インストール時にも同様にログインループが発生  
+`$ sudo add-apt-repository ppa:graphics-drivers/ppa`
+`$ ubuntu-driver devices`
+でNVIDIA driverを探す  
+recommendedされているものを以下のコマンドでインストール  
+`$ sudo apt install nvidia-driver-xxx`
+`$ nvidia-smi`
+で確認．  
+**ただし，このまま reboot するとログインループになる**  
+  そこで，以下を実行する(ドライバインストール直後に実行で解決した)  
+1. gdm3を設定ごとアンインストール  
+`$ sudo apt-get purge gdm3`
+2. gdm3を再インストールする  
+`$ sudo apt-get install gdm3`
+その後 reboot  
