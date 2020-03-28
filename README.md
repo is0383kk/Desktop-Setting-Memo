@@ -22,14 +22,14 @@ ubuntuインストール時に「Try Ubuntu without install」を選択する画
 3. Geforce GTX 1080 Ti  
 4. Linux 64-bit  
 5. Japanese  
-## 手順3:Ubuntu自体のドライバを無効化
+## 手順3:Ubuntu自体のドライバを無効化(Ubuntu19.10ではこの作業はなくてもできた)
 1. **/etc/modprobe.d/**内に**blacklist-nouveau.conf**というファイルを作成  
     `blacklist nouveau`  
     `options nouveau modeset=0`  
 と書き込み保存  
 `$ sudo update-initramfs -u`  
 で再読み込みし**再起動**
-## 手順4:インストーラの実行
+## 手順4:インストーラの実行(Ubuntu19.10ではgdm3の設定を変えて対処)
 1. **Ctrl + Alt + F1 でcuiモードに入る**  
 `$ sudo service lightdm stop`  
 でGUIを停止  
