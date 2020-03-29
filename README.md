@@ -92,7 +92,7 @@ recommendedされているものを以下のコマンドでインストール
 その後 reboot  
 
 ## CUDA10.1の導入
-[CUDA10.1](https://developer.nvidia.com/cuda-10.1-download-archive-update1?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1810&target_type=deblocal)  
+[CUDA10.1 update1 Archive](https://developer.nvidia.com/cuda-10.1-download-archive-update1?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1810&target_type=deblocal)  
 1. Linux  
 2. x86_64  
 3. Ubuntu  
