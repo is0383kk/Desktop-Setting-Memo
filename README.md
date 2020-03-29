@@ -75,17 +75,26 @@ DDR4-2666 DIMM 16GB
 
 # 追記(Ubuntu19.10インストール時)
 Ubuntu19.10インストール時にも同様にログインループが発生  
-`$ sudo add-apt-repository ppa:graphics-drivers/ppa`
-`$ ubuntu-driver devices`
+## 解決手順:NVIDIA driverの導入  
+`$ sudo add-apt-repository ppa:graphics-drivers/ppa`  
+`$ ubuntu-driver devices`  
 でNVIDIA driverを探す  
 recommendedされているものを以下のコマンドでインストール  
-`$ sudo apt install nvidia-driver-xxx`
-`$ nvidia-smi`
+`$ sudo apt install nvidia-driver-xxx`  
+`$ nvidia-smi`  
 で確認．  
 **ただし，このまま reboot するとログインループになる**  
   そこで，以下を実行する(ドライバインストール直後に実行で解決した)  
 1. gdm3を設定ごとアンインストール  
-`$ sudo apt-get purge gdm3`
+`$ sudo apt-get purge gdm3`  
 2. gdm3を再インストールする  
-`$ sudo apt-get install gdm3`
+`$ sudo apt-get install gdm3`  
 その後 reboot  
+
+## CUDA10.1の導入
+[CUDA10.1](https://developer.nvidia.com/cuda-10.1-download-archive-update1?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1810&target_type=deblocal)  
+1. Linux  
+2. x86_64  
+3. Ubuntu  
+4. 18.10(19.10にも対応)  
+5. deb(local)
