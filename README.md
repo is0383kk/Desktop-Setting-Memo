@@ -80,7 +80,7 @@ Ubuntu19.10インストール時にも同様にログインループが発生
 NVIDIA driverを探す．（必要ないらしいけどした）  
 `$ sudo add-apt-repository ppa:graphics-drivers/ppa`  
 `$ sudo apt update`  
-`$ ubuntu-driver devices`  
+`$ ubuntu-drivers devices`  
 でNVIDIA driverを探す  
 recommendedされているものを以下のコマンドでインストール  
 `$ sudo apt install nvidia-driver-xxx`  
