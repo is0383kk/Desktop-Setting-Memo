@@ -75,7 +75,9 @@ DDR4-2666 DIMM 16GB
 
 # 追記(Ubuntu19.10インストール時)
 Ubuntu19.10インストール時にも同様にログインループが発生  
-## 解決手順:NVIDIA driverの導入  
+## 解決手順:NVIDIA driverの導入
+とりあえず，update，upgrade  
+NVIDIA driverを探す．（必要ないらしいけどした）  
 `$ sudo add-apt-repository ppa:graphics-drivers/ppa`  
 `$ sudo apt update`  
 `$ ubuntu-driver devices`  
