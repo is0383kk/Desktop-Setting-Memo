@@ -1,8 +1,23 @@
 デスクトップ環境構築
 ====
-自分用のデスクトップのCUDAとcuDNNの環境構築
+# PCスペック
+iiyamaのDeep ∞　（ディープインフィニティ）  
+導入OS:Ubuntu16.04(Ubuntu19.10も後に導入)  
+CPU:core i7-8700  
+GPU:Geforce GTX 1080 Ti 11GB  
+SSD:240GB  
+DDR4-2666 DIMM 16GB  
+  
+[NEW ALIENWARE AURORA](https://www.dell.com/ja-jp/shop/%E3%83%87%E3%83%AB%E3%81%AE%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/new-alienware-aurora-%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0-rtx%E6%90%AD%E8%BC%89/spd/alienware-aurora-r9-desktop/caaawar912jp)  
+導入OS:Ubuntu19.10  
+CPU:core i9  
+GPU:Geforce RTX 2080 SUPER 2つ  
+**AURORAについては最下部の追記部分を参照**
 # GPUの認識まで
 ## 手順1
+0. BIOS設定  
+**セキュアブートの無効化**  
+これをしないとUbuntuが起動しなくなったりする．  
 1. インストール時  
 ubuntuインストール時に「Try Ubuntu without install」を選択する画面で**eを押し**grubを編集する．  
 `quit splash`を`pci=nomsi quiet splash nomodeset `に変更する．  
@@ -66,12 +81,6 @@ ubuntuインストール時に「Try Ubuntu without install」を選択する画
 2. **Runtime Library for Ubuntu**と**Developer Library for Ubuntu**の両方をダウンロード  
 `$ sudo dpkg -i `  
 でインストール．  
-# PCスペック
-OS:Ubuntu16.04  
-CPU:core i7-8700  
-GPU:Geforce 1080 Ti 11GB  
-SSD:240GB  
-DDR4-2666 DIMM 16GB  
 
 # 追記(Ubuntu19.10インストール時)
 Ubuntu19.10インストール時にも同様にログインループが発生  
