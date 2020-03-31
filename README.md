@@ -8,10 +8,10 @@ GPU:Geforce GTX 1080 Ti 11GB
 SSD:240GB  
 DDR4-2666 DIMM 16GB  
   
-[NEW ALIENWARE AURORA](https://www.dell.com/ja-jp/shop/%E3%83%87%E3%83%AB%E3%81%AE%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/new-alienware-aurora-%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0-rtx%E6%90%AD%E8%BC%89/spd/alienware-aurora-r9-desktop/caaawar912jp)  
+[NEW ALIENWARE AURORA](https://www.dell.com/ja-jp/work/shop/cty/pdp/spd/alienware-aurora-r9-desktop/caaawar914jp)  
 導入OS:Ubuntu19.10  
 CPU:core i9  
-GPU:Geforce RTX 2080 SUPER 2つ  
+GPU:Geforce RTX 2080 11GB SUPER 2つ  
 **導入OSがUbuntu19.10の場合については最下部の追記部分を参照**  
 # GPUの認識まで
 ## 手順1
