@@ -12,7 +12,7 @@ DDR4-2666 DIMM 16GB
 導入OS:Ubuntu19.10  
 CPU:core i9  
 GPU:Geforce RTX 2080 SUPER 2つ  
-**AURORAについては最下部の追記部分を参照**
+**導入OSがUbuntu19.10の場合については最下部の追記部分を参照**  
 # GPUの認識まで
 ## 手順1
 0. BIOS設定  
