@@ -102,6 +102,14 @@ recommendedされているものを以下のコマンドでインストール
 2. gdm3を再インストールする  
 `$ sudo apt-get install gdm3`  
 その後 reboot  
+### gdm3について
+GDMはGNOME Display Managerの略  
+ログインループの原因はこれにある．  
+ログイン画面に影響を及ぼすファイルが以下のファイル．  
+`$ /etc/gdm3custom.conf`  
+以下の項目が自動ログインの項目とログインするIDの項目  
+`AutomaticLoginEnable= Bool`  
+`AutomaticLogin=UserID`  
 
 ## CUDA10.1の導入
 [CUDA10.1 update1 Archive](https://developer.nvidia.com/cuda-10.1-download-archive-update1?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1810&target_type=deblocal)  
