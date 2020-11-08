@@ -110,6 +110,7 @@ GDMはGNOME Display Managerの略
 以下の項目が自動ログインの項目とログインするIDの項目  
 `AutomaticLoginEnable= Bool`  
 `AutomaticLogin=UserID`  
+**もし環境構築完了後に再起動した際にログインループに陥る場合もこの手順で解決可能**
 
 ## CUDA10.1の導入
 [CUDA10.1 update1 Archive](https://developer.nvidia.com/cuda-10.1-download-archive-update1?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1810&target_type=deblocal)  
