@@ -16,8 +16,12 @@ GPU:Geforce RTX 2080 11GB SUPER 2つ
 # GPUの認識まで
 ## 手順1
 0. BIOS設定  
-**セキュアブートの無効化**  
+起動時にF2連打でBIOS画面に移行  
+"Advanced"で「SATA operation」を「AHCI」に「USB Wake Support」を「Enabled」に変更  
+**「Security」でセキュアブートの無効化（Disabled）**  
 これをしないとUbuntuが起動しなくなったりする．  
+"Boot"で「File Browser Add Boot Option」で「USB」を選択．「EFI」，「BOOT」，「grubx64.efi」の順に選択し適当に名前を付ける．  
+起動優先順位を先ほど名前を付けたものを一番上にし，F10で再起動．  
 1. インストール時  
 ubuntuインストール時に「Try Ubuntu without install」を選択する画面で**eを押し**grubを編集する．  
 `quit splash`を`pci=nomsi quiet splash nomodeset `に変更する．  
