@@ -21,7 +21,8 @@ NVIDIAの最新のドライバーを選択して「変更の適用」．「設�
 
 
 ## CUDAの導入  
-[CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)  
+これは<span style="color: red; ">赤文字</span>です　　
+[CUDA11.6](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)  
 [今までのCUDA](https://developer.nvidia.com/cuda-toolkit-archive)  
 「Linux->x86_64->Ubuntu->20.04->deb(local)」を選択し下部の指示に従いCUDAを導入．  
 導入後，`nvidia-smi`で確認．  
@@ -31,8 +32,7 @@ export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 ```
 `source .bashrc` コマンドでシェルの設定を反映させる。
-
-[NVIDIAドライバ・CUDAの設定](https://qiita.com/SwitchBlade/items/5d5bc645822229ee0ed9)  
+[NVIDIAドライバ・CUDAの設定参考元](https://qiita.com/SwitchBlade/items/5d5bc645822229ee0ed9)  
 
 
 # その他，エラー処理や不具合対応など
