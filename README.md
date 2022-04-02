@@ -13,7 +13,37 @@ DDR4-2666 DIMM 16GB
 CPU:core i9  
 GPU:Geforce RTX 2080 11GB SUPER 2つ  
 **導入OSがUbuntu19.10の場合については最下部の追記部分を参照**  
-# 手順  
+
+# Ubuntu20.04版  
+## 手順0:Universal USB installerでISOファイルをUSBに移す  
+[UbutuISOファイルダウンロード](https://www.ubuntulinux.jp/News/ubuntu2004-ja-remix)  
+「Ubuntu」を選択，ダウンロードしたISOファイル「ubuntu-ja-20.04.1-desktop-amd64」を選択  
+## Ubuntuのダウンロード・NVIDIAドライバ
+Ubuntu-USBを指し，Ubuntuのダウンロードを行い再起動．  
+「設定->電源」にてブランクスクリーンを「しない」に変更．  
+左下から「アプリケーションを表示する」にて「追加のドライバー」を選択する．NVIDIAの最新のドライバーを選択して「変更の適用」．「設定->このシステムについて」にて「グラフィック」でGPUが反映されていることを確認．
+[NVIDIAドライバ・CUDAの設定](https://qiita.com/SwitchBlade/items/5d5bc645822229ee0ed9)  
+
+### ログインループに陥った際の対処法  
+[Ubuntuログインループ対処法](https://musaprg.hatenablog.com/entry/2020/06/30/201759)  
+1. Ctrl+Alt+F2を押して仮想コンソールに入る  
+2. `sudo vi /etc/default/grub`でgrubの設定を開く．※「x」で一文字消去．「:q!」でファイルを保存せず閉じる．「:wq」でファイルを保存し閉じる  
+4. `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`から、`splash`を消す。 変更後は`GRUB_CMDLINE_LINUX_DEFAULT="quiet"`となっているのを確認  
+5. `sudo update-grub`で変更を適用し，`reboot`
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 以下旧手順 
 ## 手順0:Universal USB installerでISOファイルをUSBに移す  
 [UbutuISOファイルダウンロード](https://www.ubuntulinux.jp/News/ubuntu2004-ja-remix)  
 「Ubuntu」を選択，ダウンロードしたISOファイル「ubuntu-ja-20.04.1-desktop-amd64」を選択  
@@ -37,7 +67,7 @@ ubuntuインストール時に「Try Ubuntu without install」を選択する画
     `GRUB_CMDLINE_LINUX="pci=noaer"`  
 そして再起動する．  
 
-# 以下旧
+
 ## 手順2:GPUのドライバをダウンロード
 以下のURLからドライバーをダウンロード  
 [ドライバーダウンロード](//www.nvidia.com/Download/index.aspx)  
