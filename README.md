@@ -61,7 +61,43 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 VSCodeを起動し，左部のExtensionsから「Japanese Language Pack for VSCode」をインストールし,「Restart」．  
 [VSCodeの各種設定はここ](https://github.com/is0383kk/VSCode)  
 
+```setting.json
+{
+    "window.zoomLevel": 1,
+    "editor.fontSize": 18,
+    
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Atom One Dark",
+    
+    "python.linting.enabled": false,
 
+    "editor.tokenColorCustomizations": {
+        "comments": {
+          "foreground": "#638505"
+        }
+    },
+
+    "breadcrumbs.enabled": false,
+    "editor.cursorBlinking": "blink",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.minimap.enabled": true, 
+    "editor.occurrencesHighlight": true,
+    "editor.renderIndentGuides": true, 
+    "editor.roundedSelection": false, 
+    "editor.scrollBeyondLastLine": false,
+    "explorer.decorations.colors": false,
+    "explorer.openEditors.visible": 0, 
+    "workbench.activityBar.visible": true, 
+    "workbench.editor.showIcons": true, 
+    "workbench.startupEditor": "none",
+    "workbench.tree.renderIndentGuides": "none",
+    "editor.insertSpaces": true,
+    "editor.renderWhitespace": "all",
+    "python.pythonPath": "/usr/local/bin/python3",
+    "vsicons.dontShowNewVersionMessage": true,
+    "explorer.confirmDelete": false,
+}
+```
 
 
 
