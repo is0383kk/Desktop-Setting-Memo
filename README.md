@@ -2,17 +2,11 @@
 ====
 # PCスペック
 iiyamaのDeep ∞　（ディープインフィニティ）  
-導入OS:Ubuntu16.04(Ubuntu19.10も後に導入)  
+導入OS:Ubuntu20.04   
 CPU:core i7-8700  
 GPU:Geforce GTX 1080 Ti 11GB  
 SSD:240GB  
 DDR4-2666 DIMM 16GB  
-  
-[NEW ALIENWARE AURORA](https://www.dell.com/ja-jp/work/shop/cty/pdp/spd/alienware-aurora-r9-desktop/caaawar914jp)  
-導入OS:Ubuntu19.10  
-CPU:core i9  
-GPU:Geforce RTX 2080 11GB SUPER 2つ  
-
 
 # Ubuntu20.04版  
 ## 手順0:Universal USB installerでISOファイルをUSBに移す  
