@@ -56,8 +56,10 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 起動すると，`reset givinng up`のような文字が何度か表示され，最後に[129.~]のような文字が表示された後，無事起動できた．  
 
-
-
+## VScodeの導入  
+[ここ](https://code.visualstudio.com/download)からダウンロード．  
+VSCodeを起動し，左部のExtensionsから「Japanese Language Pack for VSCode」をインストールし,「Restart」．  
+[VSCodeの各種設定はここ](https://github.com/is0383kk/VSCode)  
 
 
 
