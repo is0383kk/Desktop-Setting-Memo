@@ -54,6 +54,8 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 4. `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`から、`splash`を消す。 変更後は`GRUB_CMDLINE_LINUX_DEFAULT="quiet"`となっているのを確認  
 5. `sudo update-grub`で変更を適用し，`reboot`
 
+起動すると，`reset givinng up`のような文字が何度か表示され，最後に[129.~]のような文字が表示された後，無事起動できた．  
+
 
 
 
