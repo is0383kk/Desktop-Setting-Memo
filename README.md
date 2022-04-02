@@ -12,10 +12,22 @@ DDR4-2666 DIMM 16GB
 ## 手順0:Universal USB installerでISOファイルをUSBに移す  
 [UbutuISOファイルダウンロード](https://www.ubuntulinux.jp/News/ubuntu2004-ja-remix)  
 「Ubuntu」を選択，ダウンロードしたISOファイル「ubuntu-ja-20.04.1-desktop-amd64」を選択  
-## 手順1:Ubuntuのダウンロード・NVIDIAドライバ
+## 手順1:Ubuntu・NVIDIAドライバのインストール
 Ubuntu-USBを指し，Ubuntuのダウンロードを行い再起動．  
+`sudo apt-get update`及び`sudo apt-get upgrade`を実行．  
 ※「設定->電源」にてブランクスクリーンを「しない」に変更． 端末を開き「メニュー->名前なし」から「端末ベルを鳴らす」を切る．   
-左下から「アプリケーションを表示する」にて「追加のドライバー」を選択する．NVIDIAの最新のドライバーを選択して「変更の適用」．「設定->このシステムについて」にて「グラフィック」でGPUが反映されていることを確認．
+左下から「アプリケーションを表示する」にて「追加のドライバー」を選択する．NVIDIAの最新のドライバーを選択して「変更の適用」．「設定->このシステムについて」にて「グラフィック」でGPUが反映されていることを確認し`reboot`．（再起動するとログインループになると思うので下部の「その他」を参考に修復）  
+
+
+## CUDAの導入  
+[CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)
+「Linux->x86_64->Ubuntu->20.04->deb(local)」を選択し下部の指示に従いCUDAを導入．  
+導入後，`nvidia-smi`で確認．  
+```~/.bashrc
+export PATH="/usr/local/cuda/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+```
+
 [NVIDIAドライバ・CUDAの設定](https://qiita.com/SwitchBlade/items/5d5bc645822229ee0ed9)  
 
 
