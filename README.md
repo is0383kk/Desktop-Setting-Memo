@@ -16,11 +16,12 @@ DDR4-2666 DIMM 16GB
 Ubuntu-USBを指し，Ubuntuのダウンロードを行い再起動．  
 `sudo apt-get update`及び`sudo apt-get upgrade`を実行．  
 ※「設定->電源」にてブランクスクリーンを「しない」に変更． 端末を開き「メニュー->名前なし」から「端末ベルを鳴らす」を切る．   
-左下から「アプリケーションを表示する」にて「追加のドライバー」を選択する．NVIDIAの最新のドライバーを選択して「変更の適用」．「設定->このシステムについて」にて「グラフィック」でGPUが反映されていることを確認し`reboot`．（再起動するとログインループになると思うので下部の「その他」を参考に修復）  
+左下から「アプリケーションを表示する」にて「追加のドライバー」を選択する．  
+NVIDIAの最新のドライバーを選択して「変更の適用」．「設定->このシステムについて」にて「グラフィック」でGPUが反映されていることを確認し`reboot`．（再起動するとログインループになると思うので下部の「その他」を参考に修復）  
 
 
 ## CUDAの導入  
-[CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)
+[CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)  
 [今までのCUDA](https://developer.nvidia.com/cuda-toolkit-archive)  
 「Linux->x86_64->Ubuntu->20.04->deb(local)」を選択し下部の指示に従いCUDAを導入．  
 導入後，`nvidia-smi`で確認．  
