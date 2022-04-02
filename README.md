@@ -36,6 +36,8 @@ ubuntuインストール時に「Try Ubuntu without install」を選択する画
     `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pci=nomsi nomodeset"`  
     `GRUB_CMDLINE_LINUX="pci=noaer"`  
 そして再起動する．  
+
+# 以下旧
 ## 手順2:GPUのドライバをダウンロード
 以下のURLからドライバーをダウンロード  
 [ドライバーダウンロード](//www.nvidia.com/Download/index.aspx)  
