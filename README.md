@@ -21,12 +21,15 @@ Ubuntu-USBを指し，Ubuntuのダウンロードを行い再起動．
 
 ## CUDAの導入  
 [CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)
+[今までのCUDA](https://developer.nvidia.com/cuda-toolkit-archive)  
 「Linux->x86_64->Ubuntu->20.04->deb(local)」を選択し下部の指示に従いCUDAを導入．  
 導入後，`nvidia-smi`で確認．  
+確認後，`.bashrc`に以下を記述．  
 ```~/.bashrc
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 ```
+`source .bashrc` コマンドでシェルの設定を反映させる。
 
 [NVIDIAドライバ・CUDAの設定](https://qiita.com/SwitchBlade/items/5d5bc645822229ee0ed9)  
 
