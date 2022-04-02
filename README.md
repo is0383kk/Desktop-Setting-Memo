@@ -1,4 +1,4 @@
-デスクトップ環境構築
+# デスクトップ環境構築
 ====
 # PCスペック
 iiyamaのDeep ∞　（ディープインフィニティ）  
@@ -12,21 +12,21 @@ DDR4-2666 DIMM 16GB
 導入OS:Ubuntu19.10  
 CPU:core i9  
 GPU:Geforce RTX 2080 11GB SUPER 2つ  
-**導入OSがUbuntu19.10の場合については最下部の追記部分を参照**  
+
 
 # Ubuntu20.04版  
 ## 手順0:Universal USB installerでISOファイルをUSBに移す  
 [UbutuISOファイルダウンロード](https://www.ubuntulinux.jp/News/ubuntu2004-ja-remix)  
 「Ubuntu」を選択，ダウンロードしたISOファイル「ubuntu-ja-20.04.1-desktop-amd64」を選択  
-## Ubuntuのダウンロード・NVIDIAドライバ
+## 手順1:Ubuntuのダウンロード・NVIDIAドライバ
 Ubuntu-USBを指し，Ubuntuのダウンロードを行い再起動．  
-「設定->電源」にてブランクスクリーンを「しない」に変更．  
+※「設定->電源」にてブランクスクリーンを「しない」に変更． 端末を開き「メニュー->名前なし」から「端末ベルを鳴らす」を切る．   
 左下から「アプリケーションを表示する」にて「追加のドライバー」を選択する．NVIDIAの最新のドライバーを選択して「変更の適用」．「設定->このシステムについて」にて「グラフィック」でGPUが反映されていることを確認．
 [NVIDIAドライバ・CUDAの設定](https://qiita.com/SwitchBlade/items/5d5bc645822229ee0ed9)  
 
 
 # その他，エラー処理や不具合対応など
-## ログインループに陥った際の対処法  
+## ログインループに陥った際の対処法（いい加減どうにかならんかな）  
 [Ubuntuログインループ対処法](https://musaprg.hatenablog.com/entry/2020/06/30/201759)  
 1. Ctrl+Alt+F2を押して仮想コンソールに入る  
 2. `sudo vi /etc/default/grub`でgrubの設定を開く．※「x」で一文字消去．「:q!」でファイルを保存せず閉じる．「:wq」でファイルを保存し閉じる  
