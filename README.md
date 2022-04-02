@@ -9,9 +9,20 @@ SSD:240GB
 DDR4-2666 DIMM 16GB  
 
 # Ubuntu20.04版  
-## 手順0:Universal USB installerでISOファイルをUSBに移す  
+## 手順0.1：Universal USB installerでISOファイルをUSBに移す  
 [UbutuISOファイルダウンロード](https://www.ubuntulinux.jp/News/ubuntu2004-ja-remix)  
 「Ubuntu」を選択，ダウンロードしたISOファイル「ubuntu-ja-20.04.1-desktop-amd64」を選択  
+
+
+## 手順0.2：BIOS設定  
+起動時にF2連打でBIOS画面に移行  
+Alienwareの場合："Advanced"で「SATA operation」を「AHCI」に「USB Wake Support」を「Enabled」に変更  
+**「Security」でセキュアブートの無効化（Disabled）**  
+これをしないとUbuntuが起動しなくなったりする．  
+"Boot"で「File Browser Add Boot Option」で「USB」を選択．「EFI」，「BOOT」，「grubx64.efi」の順に選択し適当に名前を付ける．  
+起動優先順位を先ほど名前を付けたものを一番上にし，F10で再起動．  
+
+
 ## 手順1:Ubuntu・NVIDIAドライバのインストール
 Ubuntu-USBを指し，Ubuntuのダウンロードを行い再起動．  
 `sudo apt-get update`及び`sudo apt-get upgrade`を実行．  
@@ -21,7 +32,7 @@ NVIDIAの最新のドライバーを選択して「変更の適用」．「設�
 
 
 ## CUDAの導入  
-これは<span style="color: red; ">赤文字</span>です　　
+**注意：[PyTorch](https://pytorch.org/get-started/locally/)から適切なCUDAのVersionを調べた上でインストール**  
 [CUDA11.6](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)  
 [今までのCUDA](https://developer.nvidia.com/cuda-toolkit-archive)  
 「Linux->x86_64->Ubuntu->20.04->deb(local)」を選択し下部の指示に従いCUDAを導入．  
@@ -31,7 +42,7 @@ NVIDIAの最新のドライバーを選択して「変更の適用」．「設�
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 ```
-`source .bashrc` コマンドでシェルの設定を反映させる。
+`source .bashrc` コマンドでシェルの設定を反映させる．  
 [NVIDIAドライバ・CUDAの設定参考元](https://qiita.com/SwitchBlade/items/5d5bc645822229ee0ed9)  
 
 
