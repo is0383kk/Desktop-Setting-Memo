@@ -60,8 +60,9 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 [ここ](https://code.visualstudio.com/download)からダウンロード．  
 VSCodeを起動し，左部のExtensionsから「Japanese Language Pack for VSCode」をインストールし,「Restart」．  
 [VSCodeの各種設定はここ](https://github.com/is0383kk/VSCode)  
-
-```setting.json
+「Ctrl」+「,」で設定画面を開く．  
+右上のアイコン部分の「JSON」を開くを選択し以下をコピペ．  
+```setting.json\
 {
     "window.zoomLevel": 1,
     "editor.fontSize": 18,
