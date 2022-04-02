@@ -13,7 +13,10 @@ DDR4-2666 DIMM 16GB
 CPU:core i9  
 GPU:Geforce RTX 2080 11GB SUPER 2つ  
 **導入OSがUbuntu19.10の場合については最下部の追記部分を参照**  
-# GPUの認識まで
+# 手順  
+## 手順0:Universal USB installerでISOファイルをUSBに移す  
+[UbutuISOファイルダウンロード](https://www.ubuntulinux.jp/News/ubuntu2004-ja-remix)  
+「Ubuntu」を選択，ダウンロードしたISOファイル「ubuntu-ja-20.04.1-desktop-amd64」を選択  
 ## 手順1
 0. BIOS設定  
 起動時にF2連打でBIOS画面に移行  
