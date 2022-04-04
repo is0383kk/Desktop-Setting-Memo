@@ -101,3 +101,42 @@ VSCode拡張パッケージの「Python」「vscode-icons」「Atom One Dark」�
     "explorer.confirmDelete": false,
 }
 ```
+## Java 環境構築
+まずはUbuntu20.04に標準搭載されているJavaの確認．  
+```
+hoge:~$ java -version
+openjdk version "11.0.14.1" 2022-02-08
+OpenJDK Runtime Environment (build 11.0.14.1+1-Ubuntu-0ubuntu1.20.04)
+OpenJDK 64-Bit Server VM (build 11.0.14.1+1-Ubuntu-0ubuntu1.20.04, mixed mode, sharing)
+```
+
+このままだと.javaファイルをコンパイルできない↓．  
+```
+hoge:~$ javac test.java 
+
+コマンド 'javac' が見つかりません。次の方法でインストールできます:
+
+sudo apt install openjdk-11-jdk-headless  # version 11.0.14.1+1-0ubuntu1~20.04, or
+sudo apt install default-jdk              # version 2:1.11-72
+sudo apt install openjdk-13-jdk-headless  # version 13.0.7+5-0ubuntu1~20.04
+sudo apt install openjdk-16-jdk-headless  # version 16.0.1+9-1~20.04
+sudo apt install openjdk-17-jdk-headless  # version 17.0.2+8-1~20.04
+sudo apt install openjdk-8-jdk-headless   # version 8u312-b07-0ubuntu1~20.04
+sudo apt install ecj                      # version 3.16.0-1
+```
+
+`default-jdk`をダウンロード．  
+```
+hoge:~$ sudo apt-get install default-jdk
+```
+
+サンプル用プログラム．  
+```java
+public class HelloWorld 
+    {
+    public static void main(String[] args)
+        {
+        System.out.println("Hello World.");
+        }
+    }
+```
