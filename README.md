@@ -11,12 +11,12 @@ SSD:240GB
 DDR4-2666 DIMM 16GB  
 
 # Ubuntu20.04版(2022/04/01導入済み)  
-## 手順0.1：Universal USB installerでISOファイルをUSBに移す  
+## Universal USB installerでISOファイルをUSBに移す  
 [UbutuISOファイルダウンロード](https://www.ubuntulinux.jp/News/ubuntu2004-ja-remix)  
 Universal USB installer起動後「Ubuntu」を選択，ダウンロードしたISOファイル「ubuntu-ja-20.04.1-desktop-amd64」を選択  
 
 
-## 手順0.2：BIOS設定  
+## BIOS設定  
 起動時にF2連打でBIOS画面に移行  
 Alienwareの場合："Advanced"で「SATA operation」を「AHCI」に「USB Wake Support」を「Enabled」に変更(iiyamaPCはどうだったか忘れた)  
 **「Security」でセキュアブートの無効化（Disabled）**  
@@ -25,7 +25,7 @@ Alienwareの場合："Advanced"で「SATA operation」を「AHCI」に「USB Wak
 起動優先順位を先ほど名前を付けたものを一番上にし，F10で再起動．  
 
 
-## 手順1:Ubuntu・NVIDIAドライバのインストール
+## Ubuntu・NVIDIAドライバのインストール
 Ubuntu-USBを指し，Ubuntuのダウンロードを行い再起動．  
 `sudo apt-get update`及び`sudo apt-get upgrade`を実行．  
 ※「設定->電源」にてブランクスクリーンを「しない」に変更． 端末を開き「メニュー->名前なし」から「端末ベルを鳴らす」を切る．   
