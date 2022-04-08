@@ -102,9 +102,9 @@ VSCode拡張パッケージの「Python」「vscode-icons」「Atom One Dark」�
 }
 ```
 ### VSCode拡張機能  
-- [IntelliSense for CSS class names in HTML](IntelliSense for CSS class names in HTML):CSSクラスの入力補完プラグイン
-- [HTMLHint](HTMLHint):HTMLの静的解析ツールです
-- [Prettier - Code formatter](Prettier - Code formatter):ソースコードの自動整形ツール
+- [IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion):CSSクラスの入力補完プラグイン
+- [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint):HTMLの静的解析ツールです
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode):ソースコードの自動整形ツール
 
 ## Java用環境構築
 まずはUbuntu20.04に標準搭載されているJavaの確認．  
