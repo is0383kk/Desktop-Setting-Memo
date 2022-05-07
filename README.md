@@ -151,5 +151,4 @@ public class HelloWorld
         }
     }
 ```
-## HTML用環境構築
 
