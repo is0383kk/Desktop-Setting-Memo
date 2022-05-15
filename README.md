@@ -139,8 +139,8 @@ sudo apt install ecj                      # version 3.16.0-1
 ```
 
 ```
-hoge:~$ javac HelloWorld.java
-hoge:~$ java HelloWorld.class
+~$ javac HelloWorld.java
+~$ java HelloWorld.class
 ```
 
 サンプル用プログラム．  
