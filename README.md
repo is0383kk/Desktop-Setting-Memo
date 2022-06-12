@@ -154,7 +154,11 @@ public class HelloWorld
     }
 ```
 ## Eclipseの導入  
+1. [ここ](http://www.eclipse.org/downloads/)からEclipseのダウンロード  
+    - Download x86_68のボタンから「eclipse-inst-jre-linux64.tar.gz」をダウンロード
+2. 「eclipse-inst-jre-linux64.tar.gz」を解凍し、「eclipse-inst」をダブルクリックするとインストーラが起動  
 
+[Eclipse導入の参考](https://symfoware.blog.fc2.com/blog-entry-2523.html)  
 
 
 
