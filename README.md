@@ -160,6 +160,18 @@ public class HelloWorld
 
 [Eclipse導入の参考](https://symfoware.blog.fc2.com/blog-entry-2523.html)  
 
+### Eclipse設定備忘録
+- プログラムで生成したファイルがEclipseに表示されない問題：自動リフレッシュ機能で対応
+    - 「ウィンドウ」->「設定」->「一般」->「ワークスペース」で以下２つにチェックを入れる    
+        - ネイティブフックまたはポーリングを利用してリフレッシュ  
+        - アクセス時にリフレッシュ  
+- 補完機能の改善
+    - 「ウィンドウ」->「設定」->「Java」->「コンテンツ・アシスト」で以下を設定
+        - 「Enter以外の挿入トリガーを無効」にチェック：Enterde補完され、spaceキーで補完されなくなる 
+        - 自動有効化遅延：「200」
+        - 自動有効化トリガー：「.abcdefghijkemnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_」
+
+
 
 
 
