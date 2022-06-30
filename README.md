@@ -5,8 +5,8 @@ CUDAの導入まで
 - 目次
     1. [Ubuntu20.04の導入](#Ubuntu)
     2. [Cudaの導入](#Cuda)
-    3. [VSCodeの設定](#anchor2)
-    4. [Javaの環境構築](#anchor3)
+    3. [VSCodeの設定](#Vscode)
+    4. [Javaの環境構築](#Java)
 
 PCスペック：  
 iiyamaのDeep ∞　（ディープインフィニティ）  
@@ -16,8 +16,8 @@ GPU:Geforce GTX 1080 Ti 11GB
 SSD:240GB  
 DDR4-2666 DIMM 16GB  
 
-# Ubuntu20.04版(2022/04/01導入済み)  
 <a id="Ubuntu"></a>
+# Ubuntu20.04版(2022/04/01導入済み)  
 ## Universal USB installerでISOファイルをUSBに移す  
 [UbutuISOファイルダウンロード](https://www.ubuntulinux.jp/News/ubuntu2004-ja-remix)  
 Universal USB installer起動後「Ubuntu」を選択，ダウンロードしたISOファイル「ubuntu-ja-20.04.1-desktop-amd64」を選択  
@@ -39,9 +39,8 @@ Ubuntu-USBを指し，Ubuntuのダウンロードを行い再起動．
 左下から「アプリケーションを表示する」にて「追加のドライバー」を選択する．  
 NVIDIAの最新のドライバーを選択して「変更の適用」．「設定->このシステムについて」にて「グラフィック」でGPUが反映されていることを確認し`reboot`．（再起動するとログインループになると思うので下部の「その他」を参考に修復）  
 
-
-## CUDAの導入  
 <a id="Cuda"></a>
+## CUDAの導入  
 **注意：[PyTorch](https://pytorch.org/get-started/locally/)から適切なCUDAのVersionを調べた上でインストール**  
 [CUDA11.6](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)  
 [今までのCUDA](https://developer.nvidia.com/cuda-toolkit-archive)  
@@ -65,8 +64,10 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 起動すると，`reset givinng up`のような文字が何度か表示され，最後に[OOO.OOO.OOO]のような文字が表示された後，無事起動できた．  
 
 ---
+
+<a id="Vscode"></a>
 # VScodeの導入  
-<a id="anchor2"></a>
+
 [ここ](https://code.visualstudio.com/download)からダウンロード．  
 VSCodeを起動し，左部のExtensionsから「Japanese Language Pack for VSCode」をインストールし,「Restart」．  
 [VSCodeの各種設定はここ](https://github.com/is0383kk/VSCode)  
@@ -117,8 +118,8 @@ VSCode拡張パッケージの「Python」「vscode-icons」「Atom One Dark」�
 
 ---
 
+<a id="java"></a>
 # Java用環境構築
-<a id="anchor3"></a>
 まずはUbuntu20.04に標準搭載されているJavaの確認．  
 
 ```sh
