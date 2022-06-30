@@ -2,10 +2,10 @@
 機械学習用デスクトップ環境構築マニュアル（自分用）  
 CUDAの導入まで  
 
-
-1. [Ubuntu20.04の導入](#anchor1)
-1. [フロー](#anchor2)
-1. [詳細](#anchor3)
+- 目次
+    1. [Ubuntu20.04の導入](#anchor1)
+    2. [VSCodeの設定](#anchor2)
+    3. [Javaの環境構築](#anchor3)
 
 PCスペック：  
 iiyamaのDeep ∞　（ディープインフィニティ）  
