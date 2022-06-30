@@ -170,7 +170,8 @@ public class HelloWorld
         - 「Enter以外の挿入トリガーを無効」にチェック：Enterde補完され、spaceキーで補完されなくなる 
         - 自動有効化遅延：「200」
         - 自動有効化トリガー：「.abcdefghijkemnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_」
-
+- パースペクティブ設定：
+    - 「ウィンドウ」->「設定」->「」
 
 
 
