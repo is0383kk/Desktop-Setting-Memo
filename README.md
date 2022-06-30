@@ -55,9 +55,7 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 `source .bashrc` コマンドでシェルの設定を反映させる．  
 [NVIDIAドライバ・CUDAの設定参考元](https://qiita.com/SwitchBlade/items/5d5bc645822229ee0ed9)  
 
-
-# その他，エラー処理や不具合対応など
-## ログインループに陥った際の対処法（いい加減どうにかならんかな）  
+### ログインループに陥った際の対処法（いい加減どうにかならんかな）  
 [Ubuntuログインループ対処法](https://musaprg.hatenablog.com/entry/2020/06/30/201759)  
 1. Ctrl+Alt+F2を押して仮想コンソールに入る  
 2. `sudo vi /etc/default/grub`でgrubの設定を開く．※「x」で一文字消去．「:q!」でファイルを保存せず閉じる．「:wq」でファイルを保存し閉じる  
@@ -66,6 +64,7 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 起動すると，`reset givinng up`のような文字が何度か表示され，最後に[OOO.OOO.OOO]のような文字が表示された後，無事起動できた．  
 
+---
 # VScodeの導入  
 <a id="anchor2"></a>
 [ここ](https://code.visualstudio.com/download)からダウンロード．  
@@ -115,6 +114,8 @@ VSCode拡張パッケージの「Python」「vscode-icons」「Atom One Dark」�
     - [IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion):CSSクラスの入力補完プラグイン
     - [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint):HTMLの静的解析ツールです
     - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode):ソースコードの自動整形ツール
+
+---
 
 # Java用環境構築
 <a id="anchor3"></a>
