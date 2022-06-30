@@ -1,11 +1,12 @@
-# Ubuntu20.04 LTS導入＋GPUドライバ導入＋CUDA導入
+# Ubuntu20.04 LTS導入
 機械学習用デスクトップ環境構築マニュアル（自分用）  
 CUDAの導入まで  
 
 - 目次
-    1. [Ubuntu20.04の導入](#anchor1)
-    2. [VSCodeの設定](#anchor2)
-    3. [Javaの環境構築](#anchor3)
+    1. [Ubuntu20.04の導入](#Ubuntu)
+    2. [Cudaの導入](#Cuda)
+    3. [VSCodeの設定](#anchor2)
+    4. [Javaの環境構築](#anchor3)
 
 PCスペック：  
 iiyamaのDeep ∞　（ディープインフィニティ）  
@@ -16,7 +17,7 @@ SSD:240GB
 DDR4-2666 DIMM 16GB  
 
 # Ubuntu20.04版(2022/04/01導入済み)  
-<a id="anchor1"></a>
+<a id="Ubuntu"></a>
 ## Universal USB installerでISOファイルをUSBに移す  
 [UbutuISOファイルダウンロード](https://www.ubuntulinux.jp/News/ubuntu2004-ja-remix)  
 Universal USB installer起動後「Ubuntu」を選択，ダウンロードしたISOファイル「ubuntu-ja-20.04.1-desktop-amd64」を選択  
@@ -40,6 +41,7 @@ NVIDIAの最新のドライバーを選択して「変更の適用」．「設�
 
 
 ## CUDAの導入  
+<a id="Cuda"></a>
 **注意：[PyTorch](https://pytorch.org/get-started/locally/)から適切なCUDAのVersionを調べた上でインストール**  
 [CUDA11.6](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)  
 [今までのCUDA](https://developer.nvidia.com/cuda-toolkit-archive)  
@@ -64,7 +66,7 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 起動すると，`reset givinng up`のような文字が何度か表示され，最後に[OOO.OOO.OOO]のような文字が表示された後，無事起動できた．  
 
-## VScodeの導入  
+# VScodeの導入  
 <a id="anchor2"></a>
 [ここ](https://code.visualstudio.com/download)からダウンロード．  
 VSCodeを起動し，左部のExtensionsから「Japanese Language Pack for VSCode」をインストールし,「Restart」．  
@@ -108,13 +110,13 @@ VSCode拡張パッケージの「Python」「vscode-icons」「Atom One Dark」�
     "explorer.confirmDelete": false,
 }
 ```
-### VSCode拡張機能  
+## VSCode拡張機能  
 - HTML用
     - [IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion):CSSクラスの入力補完プラグイン
     - [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint):HTMLの静的解析ツールです
     - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode):ソースコードの自動整形ツール
 
-## Java用環境構築
+# Java用環境構築
 <a id="anchor3"></a>
 まずはUbuntu20.04に標準搭載されているJavaの確認．  
 
