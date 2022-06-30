@@ -185,7 +185,45 @@ public class HelloWorld
 - パースペクティブ設定：
     - 「ウィンドウ」->「設定」->「」
 
+# MySQLの導入  
+```
+ $ sudo apt install mysql-server
+```
 
 
+DataManagerを使ったデータベース接続確認用プログラム
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ConnectDatabase {
+	public static void main(String[] args) {
+		String path = "jdbc:mysql://localhost/";
+		String databaseName = "データベース名";
+		String jdbcUrl = path + databaseName;
+		String userId = "root";
+		String password = "パスワード";
+
+		Connection con = null;
+		try {
+			con = DriverManager.getConnection(jdbcUrl, userId, password);
+			System.out.println("接続");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (con != null) {
+					con.close();
+					System.out.println("切断");
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+```
 
 
