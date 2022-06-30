@@ -2,6 +2,11 @@
 機械学習用デスクトップ環境構築マニュアル（自分用）  
 CUDAの導入まで  
 
+
+1. [Ubuntu20.04の導入](#anchor1)
+1. [フロー](#anchor2)
+1. [詳細](#anchor3)
+
 PCスペック：  
 iiyamaのDeep ∞　（ディープインフィニティ）  
 導入OS:Ubuntu20.04   
@@ -11,6 +16,7 @@ SSD:240GB
 DDR4-2666 DIMM 16GB  
 
 # Ubuntu20.04版(2022/04/01導入済み)  
+<a id="anchor1"></a>
 ## Universal USB installerでISOファイルをUSBに移す  
 [UbutuISOファイルダウンロード](https://www.ubuntulinux.jp/News/ubuntu2004-ja-remix)  
 Universal USB installer起動後「Ubuntu」を選択，ダウンロードしたISOファイル「ubuntu-ja-20.04.1-desktop-amd64」を選択  
@@ -59,6 +65,7 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 起動すると，`reset givinng up`のような文字が何度か表示され，最後に[OOO.OOO.OOO]のような文字が表示された後，無事起動できた．  
 
 ## VScodeの導入  
+<a id="anchor2"></a>
 [ここ](https://code.visualstudio.com/download)からダウンロード．  
 VSCodeを起動し，左部のExtensionsから「Japanese Language Pack for VSCode」をインストールし,「Restart」．  
 [VSCodeの各種設定はここ](https://github.com/is0383kk/VSCode)  
@@ -108,6 +115,7 @@ VSCode拡張パッケージの「Python」「vscode-icons」「Atom One Dark」�
     - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode):ソースコードの自動整形ツール
 
 ## Java用環境構築
+<a id="anchor3"></a>
 まずはUbuntu20.04に標準搭載されているJavaの確認．  
 
 ```sh
