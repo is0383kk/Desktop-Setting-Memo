@@ -186,10 +186,58 @@ public class HelloWorld
     - 「ウィンドウ」->「設定」->「」
 
 # MySQLの導入  
-```
+```bash
  $ sudo apt install mysql-server
 ```
 
+## ユーザの作成
+ユーザ「root」でログイン  
+```sql
+ $ mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16
+Server version: 8.0.21-0ubuntu0.20.04.4 (Ubuntu)
+<snip>
+```
+USEコマンドでmysqlを指定  
+```
+mysql> USE mysql;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> CREATE DATABASE test;
+Query OK, 1 row affected (0.00 sec)
+```
+ユーザ「ubuntu」の作成  
+IDENTIFIED BY 'ubuntu'の「ubuntu」がパスワードとなる  
+```
+mysql> CREATE USER 'ubuntu'@'localhost' IDENTIFIED BY 'ubuntu';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> GRANT ALL PRIVILEGES ON test.* TO 'ubuntu'@'localhost';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SELECT user,plugin FROM user;
++------------------+-----------------------+
+| user             | plugin                |
++------------------+-----------------------+
+| debian-sys-maint | caching_sha2_password |
+| mysql.infoschema | caching_sha2_password |
+| mysql.session    | caching_sha2_password |
+| mysql.sys        | caching_sha2_password |
+| root             | mysql_native_password |
+| ubuntu           | caching_sha2_password |
++------------------+-----------------------+
+6 rows in set (0.00 sec)
+
+mysql> quit
+Bye
+```
 
 DataManagerを使ったデータベース接続確認用プログラム
 ```java
