@@ -263,6 +263,58 @@ mysql> SELECT user,plugin FROM user;
 mysql> quit
 Bye
 ```
+## MySQLを使ったテーブルの作成
+ユーザ「ubuntu」でログイン
+```sql
+ $ mysql -u ubuntu -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+<snip>
+```
+
+CREATE TABLEを用いたテーブルの作成  
+```sql
+CREATE TABLE テーブル名 (列名１ 型, 列名２ 型, 列名３ 型 );
+```
+
+実行例  
+```sql
+mysql> USE test;
+Database changed
+mysql> CREATE TABLE table1 (time DATETIME, value CHAR(10), number INTEGER );
+Query OK, 0 rows affected (0.01 sec)
+```
+
+作成されたテーブルの確認  
+```sql
+mysql> DESCRIBE table1;
++--------+----------+------+-----+---------+-------+
+| Field  | Type     | Null | Key | Default | Extra |
++--------+----------+------+-----+---------+-------+
+| time   | datetime | YES  |     | NULL    |       |
+| value  | char(10) | YES  |     | NULL    |       |
+| number | int      | YES  |     | NULL    |       |
++--------+----------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+```
+
+テーブルに値の挿入
+```
+mysql> INSERT INTO table1 VALUE ('2020-09-25 00:51:20','test-char',777);
+Query OK, 1 row affected (0.02 sec)
+```
+
+テーブルに挿入した値の確認
+```sql
+mysql> SELECT * FROM table1;
++---------------------+-----------+--------+
+| time                | value     | number |
++---------------------+-----------+--------+
+| 2020-09-25 00:51:20 | test-char |    777 |
++---------------------+-----------+--------+
+1 row in set (0.00 sec)
+```
+
 ## Javaによるデータベース接続
 
 DataManagerを使ったデータベース接続確認用プログラム
