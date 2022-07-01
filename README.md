@@ -190,6 +190,29 @@ public class HelloWorld
  $ sudo apt install mysql-server
 ```
 
+## パスワードポリシーの確認
+現在のパスワードポリシーの確認  
+```sql
+mysql> show variables like 'validate_password%';
++--------------------------------------+-------+
+| Variable_name                        | Value |
++--------------------------------------+-------+
+| validate_password.check_user_name    | ON    |
+| validate_password.dictionary_file    |       |
+| validate_password.length             | 6     |
+| validate_password.mixed_case_count   | 1     |
+| validate_password.number_count       | 1     |
+| validate_password.policy             | LOW   |
+| validate_password.special_char_count | 1     |
++--------------------------------------+-------+
+7 rows in set (0.00 sec)
+```
+パスワードポリシーの変更  
+```sql
+mysql> set global validate_password.policy=0; # ポリシーレベルをLOWに変更
+mysql> set global validate_password.length=6; # パスワードの必要文字数を6文字に変更
+```
+
 ## ユーザの作成
 ユーザ「root」でログイン  
 ```sql
