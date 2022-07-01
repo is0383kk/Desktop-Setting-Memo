@@ -223,6 +223,7 @@ Your MySQL connection id is 16
 Server version: 8.0.21-0ubuntu0.20.04.4 (Ubuntu)
 <snip>
 ```
+
 USEコマンドでmysqlを指定  
 ```sql
 mysql> USE mysql;
@@ -233,6 +234,7 @@ Database changed
 mysql> CREATE DATABASE test;
 Query OK, 1 row affected (0.00 sec)
 ```
+
 ユーザ「ubuntu」の作成  
 IDENTIFIED BY 'ubuntu'の「ubuntu」がパスワードとなる  
 ```sql
@@ -261,6 +263,7 @@ mysql> SELECT user,plugin FROM user;
 mysql> quit
 Bye
 ```
+## Javaによるデータベース接続
 
 DataManagerを使ったデータベース接続確認用プログラム
 ```java
