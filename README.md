@@ -201,7 +201,7 @@ Server version: 8.0.21-0ubuntu0.20.04.4 (Ubuntu)
 <snip>
 ```
 USEコマンドでmysqlを指定  
-```
+```sql
 mysql> USE mysql;
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
@@ -212,7 +212,7 @@ Query OK, 1 row affected (0.00 sec)
 ```
 ユーザ「ubuntu」の作成  
 IDENTIFIED BY 'ubuntu'の「ubuntu」がパスワードとなる  
-```
+```sql
 mysql> CREATE USER 'ubuntu'@'localhost' IDENTIFIED BY 'ubuntu';
 Query OK, 0 rows affected (0.00 sec)
 
