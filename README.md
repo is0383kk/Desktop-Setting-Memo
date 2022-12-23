@@ -224,6 +224,11 @@ Server version: 8.0.21-0ubuntu0.20.04.4 (Ubuntu)
 <snip>
 ```
 
+rootユーザのパスワード変更
+```sql
+mysql> set password for 'root'@'localhost' = '********';
+```
+
 USEコマンドでmysqlを指定  
 ```sql
 mysql> USE mysql;
