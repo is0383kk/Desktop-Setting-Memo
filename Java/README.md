@@ -1,0 +1,96 @@
+# Java用の環境構築
+
+# Eclipseの導入  
+1. [ここ](http://www.eclipse.org/downloads/)からEclipseのダウンロード  
+    - Download x86_68のボタンから「eclipse-inst-jre-linux64.tar.gz」をダウンロード
+2. 「eclipse-inst-jre-linux64.tar.gz」を解凍し、「eclipse-inst」をダブルクリックするとインストーラが起動 
+
+## Eclipseの日本語化
+[ここ](https://mergedoc.osdn.jp/)からPleiadesプラグインのダウンロードを行う  
+
+「/home/is0383kk/eclipse/jee-2022-12/eclipse/plugins/」に「plugins/jp.sourceforge.mergedoc.pleiades」を格納する(マージ)
+eclipse.iniに以下を追記する
+
+```
+-javaagent:/home/is0383kk/eclipse/jee-2022-12/eclipse/plugins/jp.sourceforge.mergedoc.pleiades/pleiades.jar
+-Xverify:none
+```
+
+## Eclipse基本設定
+- プログラムで生成したファイルがEclipseに表示されない問題：自動リフレッシュ機能で対応
+    - 「ウィンドウ」->「設定」->「一般」->「ワークスペース」で以下２つにチェックを入れる    
+        - ネイティブフックまたはポーリングを利用してリフレッシュ  
+        - アクセス時にリフレッシュ  
+- 補完機能の改善
+    - 「ウィンドウ」->「設定」->「Java」->「エディター」->「コンテンツ・アシスト」で以下を設定
+        - 「Enter以外の挿入トリガーを無効」にチェック：Enterde補完され、spaceキーで補完されなくなる 
+        - 自動有効化遅延：「200」
+        - 自動有効化トリガー：「.abcdefghijkemnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_」
+- パースペクティブ設定：
+    - 「ウィンドウ」->「設定」->「」
+
+## Eclipseで「Spring Bootプロジェクト」の作成ができるようにする  
+1. Spring Tool Suite（STS）のインストール  
+  - Eclipseの「ヘルプ」->「マーケットプレイス」->「Spring Tool Suite」を検索してインストール  
+2. Spring スターター・プロジェクトが作成できるかの確認  
+新規プロジェクトからSpringスタータープロジェクトを選択できたらOK
+
+# Spring スタータプロジェクトを作る
+## プロジェクトの作成
+新規プロジェクトからSpringスタータープロジェクトを選択し作成する  
+- 「新規Springスタータ・プロジェクト」での画面
+  - 「名前」と「成果物」と「パッケージ」の名称を一致させる（させなくていい可能性あり）
+  - タイプを「Gradle-Groovy」
+  - 「パッケージング」は一応war
+- 「新規Springスタータ・プロジェクト依存関係」画面
+  - Lombok
+  - Spring Web
+  - MySQL Driver
+  - My Batis Framework
+  - Thymeleaf
+ここまででプロジェクトが作成されていればOK  
+
+## 設定ファイル
+「build.gradle」に「新規Springスタータ・プロジェクト依存関係」画面で設定した機能の情報が記述されている  
+- DB接続情報を「application.property」に以下を記述
+```
+spring.datasource.url=jdbc:mysql://localhost:8080/test
+spring.datasource.username=root
+spring.datasource.password=パスワード
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+```
+ここで「Springアプリケーション」で実行してエラーが出なければOK  
+
+## 実行時に表示されるHTMLファイルを作成する  
+- 「/src/main/resources/templates」にファイルを作成し以下の「index.html」を作成する  
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Hello SpringBoot Sample!</h1>
+  </body>
+</html>
+
+```
+## Controllerを作成する  
+- 「/src/main/java」にクラスを作成し以下の「HelloController」を作成する  
+```java
+package com.example.springSample;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class HelloController {
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index(Model model) {
+        return "index";  //表示するHTMLファイルの名前（拡張子不要）を指定
+    }       
+}
+```
+再度「Springアプリケーション」で実行してエラーが出なければOK 
