@@ -52,6 +52,7 @@ eclipse.iniに以下を追記する
 
 ## 設定ファイル
 「build.gradle」に「新規Springスタータ・プロジェクト依存関係」画面で設定した機能の情報が記述されている  
+※もし追加する場合はプロジェクトを右クリック「Spring」->「スターターの追加」から追加できる  
 - DB接続情報を「application.property」に以下を記述
 ```
 spring.datasource.url=jdbc:mysql://localhost:8080/test
