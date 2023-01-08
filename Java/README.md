@@ -1,6 +1,6 @@
 # Java用の環境構築
 
-# Eclipseの導入  
+# Eclipseの導入（Ubuntu20.04）  
 1. [ここ](http://www.eclipse.org/downloads/)からEclipseのダウンロード  
     - Download x86_68のボタンから「eclipse-inst-jre-linux64.tar.gz」をダウンロード
 2. 「eclipse-inst-jre-linux64.tar.gz」を解凍し、「eclipse-inst」をダブルクリックするとインストーラが起動 
